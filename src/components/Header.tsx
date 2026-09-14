@@ -35,7 +35,7 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 md:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:gap-3 sm:px-5 sm:py-4 md:px-8">
         <a
           href="#inicio"
           onClick={onLogoClick}
@@ -66,7 +66,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle compact />
           <LanguageToggle compact />
           <a
@@ -77,8 +77,8 @@ export function Header() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle compact />
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle cycle />
           <LanguageToggle compact />
           <button
             type="button"

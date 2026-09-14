@@ -169,17 +169,17 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
         images: [
           {
-            src: '/projects/smarthabit/dashboard.png',
+            src: '/projects/smarthabit/dashboard.webp',
             alt: 'Panel de predicciones de SmartHabit IA',
             caption: 'Dashboard',
           },
           {
-            src: '/projects/smarthabit/ahorro.png',
+            src: '/projects/smarthabit/ahorro.webp',
             alt: 'Estimación de ahorro en SmartHabit IA',
             caption: 'Ahorro',
           },
           {
-            src: '/projects/smarthabit/analisis.png',
+            src: '/projects/smarthabit/analisis.webp',
             alt: 'Análisis avanzado de consumo en SmartHabit IA',
             caption: 'Análisis',
           },
@@ -207,17 +207,17 @@ export const translations: Record<Locale, LocaleContent> = {
         links: [{ label: 'GitHub', href: projectLinks.github }],
         images: [
           {
-            src: '/projects/rent-tools/landing.png',
+            src: '/projects/rent-tools/landing.webp',
             alt: 'Página principal de Rent Tools',
             caption: 'Landing',
           },
           {
-            src: '/projects/rent-tools/login.png',
+            src: '/projects/rent-tools/login.webp',
             alt: 'Inicio de sesión en Rent Tools',
             caption: 'Login',
           },
           {
-            src: '/projects/rent-tools/registration.png',
+            src: '/projects/rent-tools/registration.webp',
             alt: 'Verificación de identidad en el registro de Rent Tools',
             caption: 'Registro',
           },
@@ -245,17 +245,17 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
         images: [
           {
-            src: '/projects/admin-platform/dashboard.png',
+            src: '/projects/admin-platform/dashboard.webp',
             alt: 'Panel administrativo de plataforma privada',
             caption: 'Dashboard',
           },
           {
-            src: '/projects/admin-platform/brands.png',
+            src: '/projects/admin-platform/brands.webp',
             alt: 'Gestión de marcas en plataforma administrativa',
             caption: 'Marcas',
           },
           {
-            src: '/projects/admin-platform/device-customization.png',
+            src: '/projects/admin-platform/device-customization.webp',
             alt: 'Personalización visual de dispositivos',
             caption: 'Dispositivos',
           },
@@ -376,17 +376,17 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
         images: [
           {
-            src: '/projects/smarthabit/dashboard.png',
+            src: '/projects/smarthabit/dashboard.webp',
             alt: 'SmartHabit IA predictions dashboard',
             caption: 'Dashboard',
           },
           {
-            src: '/projects/smarthabit/ahorro.png',
+            src: '/projects/smarthabit/ahorro.webp',
             alt: 'SmartHabit IA savings estimation screen',
             caption: 'Savings',
           },
           {
-            src: '/projects/smarthabit/analisis.png',
+            src: '/projects/smarthabit/analisis.webp',
             alt: 'SmartHabit IA advanced consumption analytics',
             caption: 'Analytics',
           },
@@ -414,17 +414,17 @@ export const translations: Record<Locale, LocaleContent> = {
         links: [{ label: 'GitHub', href: projectLinks.github }],
         images: [
           {
-            src: '/projects/rent-tools/landing.png',
+            src: '/projects/rent-tools/landing.webp',
             alt: 'Rent Tools landing page',
             caption: 'Landing',
           },
           {
-            src: '/projects/rent-tools/login.png',
+            src: '/projects/rent-tools/login.webp',
             alt: 'Rent Tools login screen',
             caption: 'Login',
           },
           {
-            src: '/projects/rent-tools/registration.png',
+            src: '/projects/rent-tools/registration.webp',
             alt: 'Identity verification during Rent Tools registration',
             caption: 'Registration',
           },
@@ -452,17 +452,17 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
         images: [
           {
-            src: '/projects/admin-platform/dashboard.png',
+            src: '/projects/admin-platform/dashboard.webp',
             alt: 'Private admin platform dashboard',
             caption: 'Dashboard',
           },
           {
-            src: '/projects/admin-platform/brands.png',
+            src: '/projects/admin-platform/brands.webp',
             alt: 'Brand management in admin platform',
             caption: 'Brands',
           },
           {
-            src: '/projects/admin-platform/device-customization.png',
+            src: '/projects/admin-platform/device-customization.webp',
             alt: 'Visual customization for dedicated devices',
             caption: 'Devices',
           },

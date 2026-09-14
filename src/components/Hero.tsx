@@ -36,7 +36,7 @@ export function Hero() {
       <div className="glow pointer-events-none absolute inset-0" />
 
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_auto] lg:gap-12">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_auto] lg:gap-12">
           <Reveal>
             <div>
               <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
@@ -44,7 +44,7 @@ export function Hero() {
                 {t.ui.available}
               </p>
 
-              <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+              <h1 className="max-w-3xl text-[2rem] font-bold leading-tight tracking-tight sm:text-4xl md:text-6xl">
                 {t.ui.greeting}{' '}
                 <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
                   {SITE.name}
@@ -56,17 +56,19 @@ export function Hero() {
                 {t.profile.tagline}
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center gap-3">
+              <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:flex-wrap sm:items-center">
                 <a
                   href="#proyectos"
-                  className="btn-primary inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-bg"
+                  className="btn-primary col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-bg sm:col-span-1"
                 >
                   {t.ui.viewProjects}
                 </a>
-                <CvDownloadButton />
+                <div className="col-span-2 sm:col-span-1 sm:contents">
+                  <CvDownloadButton className="w-full justify-center sm:w-auto" />
+                </div>
                 <a
                   href="#contacto"
-                  className="btn-secondary inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-text"
+                  className="btn-secondary inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-text"
                 >
                   <Mail size={16} />
                   {t.ui.contact}
@@ -75,7 +77,7 @@ export function Hero() {
                   href={SITE.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-secondary inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-text"
+                  className="btn-secondary inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-4 py-3 text-sm font-medium text-text sm:px-5"
                 >
                   <Code2 size={16} />
                   GitHub
@@ -84,40 +86,42 @@ export function Hero() {
                   href={SITE.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-secondary inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-text"
+                  className="btn-secondary col-span-2 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-4 py-3 text-sm font-medium text-text sm:col-span-1 sm:px-5"
                 >
                   <Share2 size={16} />
                   LinkedIn
                 </a>
               </div>
 
-              <div className="mt-16 flex items-center gap-2 text-xs text-muted">
+              <div className="mt-10 flex items-center gap-2 text-xs text-muted md:mt-16">
                 <ArrowDown size={14} className="animate-bounce motion-reduce:animate-none" />
                 {t.ui.scrollHint}
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="mx-auto lg:mx-0 lg:justify-self-end">
-              <div className="relative">
-                <div
-                  className={`absolute -inset-3 rounded-[1.75rem] blur-2xl ${
-                    resolved === 'light'
-                      ? 'bg-gradient-to-br from-accent/15 to-accent-2/15'
-                      : 'bg-gradient-to-br from-accent/20 to-accent-2/20'
-                  }`}
-                />
-                <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-2xl">
+          <Reveal delay={120} className="order-first lg:order-none lg:justify-self-end">
+            <div className="relative mx-auto w-fit lg:mx-0">
+              <div
+                className={`absolute -inset-3 rounded-[1.75rem] blur-2xl ${
+                  resolved === 'light'
+                    ? 'bg-gradient-to-br from-accent/15 to-accent-2/15'
+                    : 'bg-gradient-to-br from-accent/20 to-accent-2/20'
+                }`}
+              />
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl sm:rounded-[1.75rem]">
+                <picture>
+                  <source srcSet="/profile.webp" type="image/webp" />
                   <img
                     src="/profile.jpg"
                     alt={SITE.name}
-                    width={4480}
-                    height={4831}
-                    className="block w-[min(100vw-2.5rem,280px)] max-w-[280px] h-auto"
+                    width={280}
+                    height={302}
+                    fetchPriority="high"
                     decoding="async"
+                    className="block h-auto w-36 sm:w-48 lg:w-[260px]"
                   />
-                </div>
+                </picture>
               </div>
             </div>
           </Reveal>

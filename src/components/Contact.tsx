@@ -12,7 +12,7 @@ export function Contact() {
     <section id="contacto" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal>
-          <div className="overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface to-surface-2 p-8 md:p-12">
+          <div className="overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface to-surface-2 p-6 sm:p-8 md:p-12">
             <p className="font-mono text-sm text-accent">{t.ui.contactSection}</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
               {t.ui.contactTitle}
@@ -28,10 +28,10 @@ export function Contact() {
                 href={gmailUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 transition hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex max-w-full items-start gap-2 transition hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                <Mail size={16} className="text-accent" aria-hidden />
-                {SITE.email}
+                <Mail size={16} className="mt-0.5 shrink-0 text-accent" aria-hidden />
+                <span className="break-all">{SITE.email}</span>
               </a>
               <a
                 href={SITE.github}

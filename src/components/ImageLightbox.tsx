@@ -71,7 +71,7 @@ export function ImageLightbox({
               event.stopPropagation()
               onChange((index - 1 + images.length) % images.length)
             }}
-            className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-border bg-surface p-2 text-muted transition hover:text-text sm:inline-flex"
+            className="absolute left-3 top-1/2 inline-flex -translate-y-1/2 rounded-full border border-border bg-surface p-2 text-muted transition hover:text-text"
             aria-label={labels.previous}
           >
             <ChevronLeft size={22} />
@@ -82,7 +82,7 @@ export function ImageLightbox({
               event.stopPropagation()
               onChange((index + 1) % images.length)
             }}
-            className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-border bg-surface p-2 text-muted transition hover:text-text sm:inline-flex"
+            className="absolute right-3 top-1/2 inline-flex -translate-y-1/2 rounded-full border border-border bg-surface p-2 text-muted transition hover:text-text"
             aria-label={labels.next}
           >
             <ChevronRight size={22} />
@@ -123,7 +123,7 @@ export function ImageLightboxTrigger({
     <button
       type="button"
       onClick={onClick}
-      className="absolute right-2 top-2 rounded-full border border-border/80 bg-bg/80 p-1.5 text-muted opacity-0 backdrop-blur transition group-hover:opacity-100 hover:text-accent"
+      className="absolute right-2 top-2 rounded-full border border-border/80 bg-bg/80 p-1.5 text-muted opacity-100 backdrop-blur transition sm:opacity-0 sm:group-hover:opacity-100 hover:text-accent"
       aria-label={label}
     >
       <ZoomIn size={14} />

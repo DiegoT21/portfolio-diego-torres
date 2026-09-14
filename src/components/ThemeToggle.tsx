@@ -8,7 +8,7 @@ const icons: Record<ThemePreference, typeof Sun> = {
   system: Monitor,
 }
 
-export function ThemeToggle({ compact = false }: { compact?: boolean }) {
+export function ThemeToggle({ compact = false, cycle = false }: { compact?: boolean; cycle?: boolean }) {
   const { preference, setPreference } = useTheme()
   const { t } = useLanguage()
 
@@ -17,6 +17,25 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
     { value: 'dark', label: 'D', aria: t.ui.themeDark },
     { value: 'system', label: 'S', aria: t.ui.themeSystem },
   ]
+
+  if (cycle) {
+    const order: ThemePreference[] = ['light', 'dark', 'system']
+    const next = order[(order.indexOf(preference) + 1) % order.length]
+    const Icon = icons[preference]
+    const current = options.find((option) => option.value === preference)
+
+    return (
+      <button
+        type="button"
+        aria-label={current?.aria}
+        title={current?.aria}
+        onClick={() => setPreference(next)}
+        className="inline-flex rounded-full border border-border bg-surface p-2 text-muted transition hover:text-text"
+      >
+        <Icon size={16} aria-hidden />
+      </button>
+    )
+  }
 
   return (
     <div

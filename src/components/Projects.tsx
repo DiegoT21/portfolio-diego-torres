@@ -32,7 +32,7 @@ export function Projects() {
               className={project.featured ? 'lg:col-span-2' : undefined}
             >
               <article
-                className={`card-hover group flex h-full flex-col rounded-2xl border bg-surface p-6 ${
+                className={`card-hover group flex h-full flex-col rounded-2xl border bg-surface p-4 sm:p-6 ${
                   project.featured
                     ? 'border-accent/40 shadow-[0_0_40px_color-mix(in_srgb,var(--color-accent)_8%,transparent)]'
                     : 'border-border'
@@ -63,14 +63,14 @@ export function Projects() {
                 <p className="mt-4 leading-relaxed text-muted">{project.description}</p>
 
                 {project.metrics && project.metrics.length > 0 && (
-                  <div className="mt-5 grid grid-cols-3 gap-3">
+                  <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
                     {project.metrics.map((metric) => (
                       <div
                         key={metric.label}
-                        className="rounded-xl border border-border bg-bg px-3 py-3 text-center"
+                        className="rounded-xl border border-border bg-bg px-2 py-2 text-center sm:px-3 sm:py-3"
                       >
-                        <p className="font-mono text-lg font-semibold text-accent">{metric.value}</p>
-                        <p className="mt-1 text-xs text-muted">{metric.label}</p>
+                        <p className="font-mono text-base font-semibold text-accent sm:text-lg">{metric.value}</p>
+                        <p className="mt-1 text-[11px] leading-tight text-muted sm:text-xs">{metric.label}</p>
                       </div>
                     ))}
                   </div>
@@ -94,7 +94,11 @@ export function Projects() {
                           <img
                             src={image.src}
                             alt={image.alt}
+                            width={640}
+                            height={360}
                             loading="lazy"
+                            decoding="async"
+                            sizes="(min-width: 1024px) 280px, (min-width: 640px) 30vw, 100vw"
                             className="aspect-video w-full object-cover object-top transition duration-300 group-hover/image:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover/image:scale-100"
                           />
                         </button>
