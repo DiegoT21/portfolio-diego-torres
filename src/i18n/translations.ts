@@ -264,9 +264,9 @@ export const translations: Record<Locale, LocaleContent> = {
     ],
     skillGroups: [
       { title: 'Frontend', items: ['React', 'TypeScript', 'Astro', 'Tailwind CSS', 'Responsive UI'] },
-      { title: 'Backend', items: ['Node.js', 'Django REST', 'APIs REST', 'Autenticación JWT', 'WebSockets'] },
-      { title: 'Data & IA', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Chart.js', 'Analítica'] },
-      { title: 'Infra & mobile', items: ['Docker', 'Git', 'AWS S3', 'Flutter', 'Railway', 'Vercel'] },
+      { title: 'Backend', items: ['Node.js', 'Django REST', 'APIs REST', 'PostgreSQL', 'JWT', 'WebSockets'] },
+      { title: 'Data & IA', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Claude / Gemini', 'Analítica'] },
+      { title: 'Infra & mobile', items: ['Docker', 'GitHub', 'AWS', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
     ],
     navLinks: [
       { href: '#inicio', label: 'Inicio' },
@@ -471,9 +471,9 @@ export const translations: Record<Locale, LocaleContent> = {
     ],
     skillGroups: [
       { title: 'Frontend', items: ['React', 'TypeScript', 'Astro', 'Tailwind CSS', 'Responsive UI'] },
-      { title: 'Backend', items: ['Node.js', 'Django REST', 'REST APIs', 'JWT auth', 'WebSockets'] },
-      { title: 'Data & AI', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Chart.js', 'Analytics'] },
-      { title: 'Infra & mobile', items: ['Docker', 'Git', 'AWS S3', 'Flutter', 'Railway', 'Vercel'] },
+      { title: 'Backend', items: ['Node.js', 'Django REST', 'REST APIs', 'PostgreSQL', 'JWT', 'WebSockets'] },
+      { title: 'Data & AI', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Claude / Gemini', 'Analytics'] },
+      { title: 'Infra & mobile', items: ['Docker', 'GitHub', 'AWS', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
     ],
     navLinks: [
       { href: '#inicio', label: 'Home' },
