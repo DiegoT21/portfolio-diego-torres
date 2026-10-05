@@ -8,17 +8,13 @@ type RevealProps = {
 
 export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
 
   useEffect(() => {
     const el = ref.current
-    if (!el) return
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduced) {
-      setVisible(true)
-      return
-    }
+    if (!el || visible) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -32,7 +28,7 @@ export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [visible])
 
   return (
     <div

@@ -7,6 +7,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
+import { readStorage, writeStorage } from '../lib/storage'
 
 export type ThemePreference = 'light' | 'dark' | 'system'
 export type ResolvedTheme = 'light' | 'dark'
@@ -27,7 +28,7 @@ function getSystemTheme(): ResolvedTheme {
 }
 
 function getInitialPreference(): ThemePreference {
-  const saved = localStorage.getItem(STORAGE_KEY)
+  const saved = readStorage(STORAGE_KEY)
   if (saved === 'light' || saved === 'dark' || saved === 'system') return saved
   return 'system'
 }
@@ -40,7 +41,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const setPreference = useCallback((next: ThemePreference) => {
     setPreferenceState(next)
-    localStorage.setItem(STORAGE_KEY, next)
+    writeStorage(STORAGE_KEY, next)
   }, [])
 
   const cyclePreference = useCallback(() => {
