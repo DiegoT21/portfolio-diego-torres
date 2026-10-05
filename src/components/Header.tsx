@@ -20,6 +20,15 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    if (!open) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
   const onLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
     setLogoAnimating(true)

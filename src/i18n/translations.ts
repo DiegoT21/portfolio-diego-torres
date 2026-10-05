@@ -127,7 +127,7 @@ export const translations: Record<Locale, LocaleContent> = {
     about: [
       'Desarrollador full stack con experiencia construyendo plataformas web, modelos de IA y dashboards de datos desde cero: frontend reactivo, APIs REST, machine learning e integraciones en la nube.',
       'Diseño, desarrollo y presento mis proyectos de punta a punta. SmartHabit IA — mi solución de predicción de consumo con inteligencia artificial — ganó el premio al mejor proyecto en Samsung Innovations Campus 2025.',
-      'Actualmente combino proyectos académicos con productos privados en fase de lanzamiento, siempre respetando confidencialidad cuando el contexto lo requiere.',
+      'Actualmente soy encargado del Área de Tecnología en AutoCash: mejoro el sistema interno, reviso la infraestructura en AWS y el flujo de CI/CD, y analizo oportunidades de automatización. Estudio Desarrollo y Gestión de Software en la UTP (4.º año).',
     ],
     services: [
       { title: 'Sitios y dashboards web', description: 'Landing pages, paneles admin y flujos responsive con React, Astro y Tailwind.' },
@@ -224,6 +224,42 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
       },
       {
+        id: 'amber-alert',
+        title: 'Sistema de Alerta Amber',
+        subtitle: 'Notificación masiva para emergencias',
+        description:
+          'Sistema de alertas de baja latencia con panel administrativo seguro e interfaz pública para emergencias. Primer lugar y Mayor Impacto Social en el JIC Nacional APANAC.',
+        highlights: [
+          'Notificaciones masivas con Web Push y baja latencia',
+          'Panel administrativo seguro para emitir y gestionar alertas',
+          'Interfaz pública para consultar alertas de emergencia',
+        ],
+        stack: ['Django', 'MySQL', 'Web Push'],
+        badge: 'JIC Nacional APANAC · 2025',
+        award: '1.er lugar · Mayor Impacto Social · JIC Nacional APANAC',
+        metrics: [
+          { value: '#1', label: 'JIC Nacional APANAC' },
+          { value: 'Push', label: 'Alertas masivas' },
+        ],
+      },
+      {
+        id: 'fisc-vento',
+        title: 'Fisc-Vento',
+        subtitle: 'Infraestructura y CI/CD',
+        description:
+          'Proyecto personal donde aplico prácticas de infraestructura y CI/CD, a partir del análisis de los flujos utilizados en AutoCash.',
+        highlights: [
+          'Prácticas de infraestructura aplicadas en un proyecto propio',
+          'Flujos de CI/CD inspirados en el análisis de AWS y despliegues reales',
+        ],
+        stack: ['AWS', 'CI/CD', 'Docker Compose', 'GitHub'],
+        badge: 'Proyecto personal',
+        metrics: [
+          { value: 'CI/CD', label: 'Flujos de despliegue' },
+          { value: 'AWS', label: 'Infraestructura' },
+        ],
+      },
+      {
         id: 'private-platform',
         title: 'Plataforma administrativa',
         subtitle: 'Proyecto privado · Pre-lanzamiento',
@@ -264,9 +300,9 @@ export const translations: Record<Locale, LocaleContent> = {
     ],
     skillGroups: [
       { title: 'Frontend', items: ['React', 'TypeScript', 'Astro', 'Tailwind CSS', 'Responsive UI'] },
-      { title: 'Backend', items: ['Node.js', 'Django REST', 'APIs REST', 'PostgreSQL', 'JWT', 'WebSockets'] },
+      { title: 'Backend', items: ['Node.js', 'Bun / Hono', 'Django REST', 'C#', 'APIs REST', 'PostgreSQL', 'MySQL', 'JWT', 'WebSockets'] },
       { title: 'Data & IA', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Claude / Gemini', 'Analítica'] },
-      { title: 'Infra & mobile', items: ['Docker', 'GitHub', 'AWS', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
+      { title: 'Infra & mobile', items: ['Docker Compose', 'GitHub', 'AWS', 'CI/CD', 'Linux / Bash', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
     ],
     navLinks: [
       { href: '#inicio', label: 'Inicio' },
@@ -334,7 +370,7 @@ export const translations: Record<Locale, LocaleContent> = {
     about: [
       'Full stack developer experienced in building web platforms, AI models, and data dashboards from scratch: reactive frontends, REST APIs, machine learning, and cloud integrations.',
       'I design, build, and present my projects end to end. SmartHabit IA — my AI-powered consumption forecasting solution — won best project at Samsung Innovations Campus 2025.',
-      'I currently combine academic projects with private pre-launch products, always respecting confidentiality when required.',
+      'I currently lead the Technology Area at AutoCash: improving the internal system, reviewing the AWS infrastructure and CI/CD flow, and analyzing automation opportunities. I am in my 4th year of Software Development and Management at UTP.',
     ],
     services: [
       { title: 'Websites & dashboards', description: 'Landing pages, admin panels, and responsive flows with React, Astro, and Tailwind.' },
@@ -431,6 +467,42 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
       },
       {
+        id: 'amber-alert',
+        title: 'Amber Alert System',
+        subtitle: 'Mass notification for emergencies',
+        description:
+          'Low-latency alert system with a secure admin panel and a public interface for emergencies. First place and Highest Social Impact at the JIC Nacional APANAC.',
+        highlights: [
+          'Low-latency mass notifications via Web Push',
+          'Secure admin panel to issue and manage alerts',
+          'Public interface to view emergency alerts',
+        ],
+        stack: ['Django', 'MySQL', 'Web Push'],
+        badge: 'JIC Nacional APANAC · 2025',
+        award: '1st place · Highest Social Impact · JIC Nacional APANAC',
+        metrics: [
+          { value: '#1', label: 'JIC Nacional APANAC' },
+          { value: 'Push', label: 'Mass alerts' },
+        ],
+      },
+      {
+        id: 'fisc-vento',
+        title: 'Fisc-Vento',
+        subtitle: 'Infrastructure & CI/CD',
+        description:
+          'Personal project where I apply infrastructure and CI/CD practices, based on analyzing the workflows used at AutoCash.',
+        highlights: [
+          'Infrastructure practices applied in a project of my own',
+          'CI/CD flows inspired by analysis of AWS and real deployments',
+        ],
+        stack: ['AWS', 'CI/CD', 'Docker Compose', 'GitHub'],
+        badge: 'Personal project',
+        metrics: [
+          { value: 'CI/CD', label: 'Deployment flows' },
+          { value: 'AWS', label: 'Infrastructure' },
+        ],
+      },
+      {
         id: 'private-platform',
         title: 'Admin platform',
         subtitle: 'Private project · Pre-launch',
@@ -471,9 +543,9 @@ export const translations: Record<Locale, LocaleContent> = {
     ],
     skillGroups: [
       { title: 'Frontend', items: ['React', 'TypeScript', 'Astro', 'Tailwind CSS', 'Responsive UI'] },
-      { title: 'Backend', items: ['Node.js', 'Django REST', 'REST APIs', 'PostgreSQL', 'JWT', 'WebSockets'] },
+      { title: 'Backend', items: ['Node.js', 'Bun / Hono', 'Django REST', 'C#', 'REST APIs', 'PostgreSQL', 'MySQL', 'JWT', 'WebSockets'] },
       { title: 'Data & AI', items: ['Python', 'TensorFlow/Keras', 'Pandas', 'LSTM', 'Claude / Gemini', 'Analytics'] },
-      { title: 'Infra & mobile', items: ['Docker', 'GitHub', 'AWS', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
+      { title: 'Infra & mobile', items: ['Docker Compose', 'GitHub', 'AWS', 'CI/CD', 'Linux / Bash', 'Electron / Tauri', 'Flutter', 'Railway', 'Vercel'] },
     ],
     navLinks: [
       { href: '#inicio', label: 'Home' },

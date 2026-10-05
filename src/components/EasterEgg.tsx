@@ -25,25 +25,21 @@ export function EasterEgg() {
   }, [])
 
   useEffect(() => {
-    if (!open) {
-      setTyped('')
-      return
-    }
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduced) {
-      setTyped(COMMAND)
-      return
-    }
+    if (!open) return
 
     let i = 0
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduced) i = COMMAND.length - 1
     const interval = window.setInterval(() => {
       i += 1
       setTyped(COMMAND.slice(0, i))
       if (i >= COMMAND.length) window.clearInterval(interval)
     }, 55)
 
-    return () => window.clearInterval(interval)
+    return () => {
+      window.clearInterval(interval)
+      setTyped('')
+    }
   }, [open])
 
   useEffect(() => {

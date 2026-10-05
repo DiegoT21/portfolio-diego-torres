@@ -19,4 +19,8 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    files: ['src/**/*Context.tsx', 'src/components/EasterEgg.tsx'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+  },
 ])

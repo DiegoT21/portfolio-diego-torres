@@ -7,6 +7,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
+import { readStorage, writeStorage } from '../lib/storage'
 import { translations, type Locale, type LocaleContent } from './translations'
 
 const STORAGE_KEY = 'portfolio-locale'
@@ -21,7 +22,7 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 function getInitialLocale(): Locale {
-  const saved = localStorage.getItem(STORAGE_KEY)
+  const saved = readStorage(STORAGE_KEY)
   if (saved === 'es' || saved === 'en') return saved
   return navigator.language.toLowerCase().startsWith('en') ? 'en' : 'es'
 }
@@ -31,7 +32,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next)
-    localStorage.setItem(STORAGE_KEY, next)
+    writeStorage(STORAGE_KEY, next)
   }, [])
 
   const toggleLocale = useCallback(() => {

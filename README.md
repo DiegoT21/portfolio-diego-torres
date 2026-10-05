@@ -8,6 +8,7 @@ Sitio personal de desarrollador full stack. Una sola página con secciones de pr
 - Vite
 - Tailwind CSS v4
 - Lucide React (iconos)
+- Bilingüe (ES/EN) con tema claro/oscuro
 
 ## Desarrollo local
 

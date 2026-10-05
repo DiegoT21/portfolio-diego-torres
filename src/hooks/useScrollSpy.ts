@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 
 export function useScrollSpy(sectionIds: string[], offset = 120) {
   const [activeId, setActiveId] = useState(sectionIds[0] ?? '')
+  const idsKey = sectionIds.join(',')
 
   useEffect(() => {
-    const sections = sectionIds
+    const sections = idsKey
+      .split(',')
       .map((id) => document.getElementById(id.replace('#', '')))
       .filter(Boolean) as HTMLElement[]
 
@@ -26,7 +28,7 @@ export function useScrollSpy(sectionIds: string[], offset = 120) {
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [sectionIds, offset])
+  }, [idsKey, offset])
 
   return activeId
 }
