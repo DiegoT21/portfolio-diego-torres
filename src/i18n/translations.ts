@@ -243,6 +243,23 @@ export const translations: Record<Locale, LocaleContent> = {
         ],
       },
       {
+        id: 'fisc-vento',
+        title: 'Fisc-Vento',
+        subtitle: 'Infraestructura y CI/CD',
+        description:
+          'Proyecto personal donde aplico prácticas de infraestructura y CI/CD, a partir del análisis de los flujos utilizados en AutoCash.',
+        highlights: [
+          'Prácticas de infraestructura aplicadas en un proyecto propio',
+          'Flujos de CI/CD inspirados en el análisis de AWS y despliegues reales',
+        ],
+        stack: ['AWS', 'CI/CD', 'Docker Compose', 'GitHub'],
+        badge: 'Proyecto personal',
+        metrics: [
+          { value: 'CI/CD', label: 'Flujos de despliegue' },
+          { value: 'AWS', label: 'Infraestructura' },
+        ],
+      },
+      {
         id: 'private-platform',
         title: 'Plataforma administrativa',
         subtitle: 'Proyecto privado · Pre-lanzamiento',
@@ -466,6 +483,23 @@ export const translations: Record<Locale, LocaleContent> = {
         metrics: [
           { value: '#1', label: 'JIC Nacional APANAC' },
           { value: 'Push', label: 'Mass alerts' },
+        ],
+      },
+      {
+        id: 'fisc-vento',
+        title: 'Fisc-Vento',
+        subtitle: 'Infrastructure & CI/CD',
+        description:
+          'Personal project where I apply infrastructure and CI/CD practices, based on analyzing the workflows used at AutoCash.',
+        highlights: [
+          'Infrastructure practices applied in a project of my own',
+          'CI/CD flows inspired by analysis of AWS and real deployments',
+        ],
+        stack: ['AWS', 'CI/CD', 'Docker Compose', 'GitHub'],
+        badge: 'Personal project',
+        metrics: [
+          { value: 'CI/CD', label: 'Deployment flows' },
+          { value: 'AWS', label: 'Infrastructure' },
         ],
       },
       {
